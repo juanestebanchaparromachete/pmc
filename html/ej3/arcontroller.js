@@ -39,6 +39,7 @@ window.addEventListener('load', function() {
               material: {
                 type: 'phong',
                 color: 0x000000
+                
               }
             }, {poi_id: 'marker'});
 
