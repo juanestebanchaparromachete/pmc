@@ -1,3 +1,39 @@
+var app = angular.module('myApp', ['ngRoute']);
+
+app.config(function($routeProvider) {
+    $routeProvider
+        .when("/", {
+        templateUrl : "html/main.html",
+    })
+        .when("/catalogoSha", {
+        templateUrl : "html/catalogoSha.html",
+        controller : "catalogoCtrl"
+    }) .when("/catalogoAlfa", {
+        templateUrl : "html/catalogoAlfa.html",
+        controller : "catalogoCtrl"
+    }) .when("/catalogoMya", {
+        templateUrl : "html/catalogoMya.html",
+        controller : "catalogoCtrl"
+    })
+        .when("/producto", {
+        templateUrl : "html/producto.html",
+        controller : "catalogoCtrl"
+    });
+});
+
+
+function goToIndex() {
+    window.location.href = 'index.html';
+}
+
+function goToIndexFromHtml() {
+    window.location.href="/index.html";
+}
+function goBack() {
+    window.history.back();
+}
+
+
 $(document).ready(function () {
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
@@ -43,4 +79,8 @@ function gotoInte() {
 
 function gotoQr() {
     window.location.href = 'html/qr/qr.html';
+}
+
+function goToCatalogoMuebles() {
+    window.location.href = 'html/catalogo.html';
 }

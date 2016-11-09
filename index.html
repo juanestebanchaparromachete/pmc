@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html html ng-app="myApp"  lang="en">
 
     <head>
-        <!-- Theme Made By www.w3schools.com - No Copyright -->
         <title>Smart Design</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       
+        
+        
+        
+        <!--angularsj-->
+        
+        <script src="bin/angular-1.5.8/angular.js"></script>
+        <script src="bin/angular-1.5.8/angular-animate.js"></script>
+        <script src="bin/angular-1.5.8/angular-sanitize.js"></script>
+        <script src="bin/angular-1.5.8/angular-route.js"></script>
         <script src="js/app.js"></script>
+        
+        
         <style>
 
         </style>
@@ -34,6 +43,7 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#about">LA IDEA</a></li>
+                        <li><a href="#empresas">EMPRESAS</a></li>
                         <li><a href="#services">SERVICIOS</a></li>
                         <li><a href="#contact">CONTACTO</a></li>
                     </ul>
@@ -56,7 +66,7 @@
                 <div class="col-sm-8">
                     <h2>Nuestro propósito</h2>
                     <br>
-                    <h4>.</h4>
+                    <h4> Brindarle al usuario una herramienta que le permita interactuar con un objeto de interés, el cual sea electrodoméstico, mueble o cualquier elemento que desea ubicar espacialmente en su hogar.</h4>
                     <br>
                     <p>.</p>
                     <br>
@@ -75,43 +85,20 @@
                 <div class="col-sm-8">
                     <h2>Mercado</h2>
                     <br>
-                    <h4>Muebles y enseres .</h4>
+                    <h4>Las grandes compañías distribuidoras de muebles y accesorio para el hogar bien sea, eléctricos o de amoblado.</h4>
                     <br>
                     <p>.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Container (Services Section) -->
-        <div id="services" class="container-fluid text-center">
-            <h2>Servicio</h2>
-            <h4>¿Que ofrecemos?</h4>
-            <br>
-            <div class="row slideanim">
-                <div class="col-sm-4">
-                    <span class="glyphicon glyphicon-off logo-small" onclick="gotoGeo()"></span>
-                    <h4>GEOLOCALIZACIÓN</h4>
-                    <p>Sistema de posicionamiento,que puede distinguirse de estos por un mayor énfasis en la determinación de una posición significativa (por ejemplo, una dirección de una calle) y no sólo por un conjunto de coordenadas geográficas.</p>
-                </div>
-                <div class="col-sm-4">
-                    <span  class="glyphicon glyphicon-wrench logo-small" onclick="gotoInte()"></span>
-                    <h4>INTERACCIÓN</h4>
-                    <p> Acción recíproca entre dos o más objetos que se encuentran en el plano cordenado en 3D que permite la ejecuccion de una acción sobre un objeto.</p>
-                </div>
-                <div class="col-sm-4">
-                    <span  class="glyphicon glyphicon-lock logo-small" onclick="gotoQr()"></span>
-                    <h4>QR</h4>
-                    <p>Módulo para almacenar información en una matriz de puntos o en un código de barras bidimensional, Apartir del cual se podra obtener un objeto en 3D. </p>
-                </div>
-            </div>
-            <br>
-            <br>
-            
-        </div>
-
+       
+        <!-- Container (catalogo) -->
+        <div id="empresas" class="container-fluid" ng-view></div>
+        
         <!-- Container (Portfolio Section) -->
         <div id="Ideas" class="container-fluid text-center">
-           
+
             <h2>IDEAS</h2>
             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
                 <!-- Indicators -->
@@ -122,7 +109,7 @@
                 </ol>
 
                 <!-- Wrapper for slides -->
-                
+
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <h4>"Plasmamos tus ideas. 
@@ -149,7 +136,7 @@
             </div>
         </div>
 
-        
+
 
         <!-- Container (Contact Section) -->
         <div id="contact" class="container-fluid bg-grey">
@@ -157,7 +144,7 @@
             <div class="row">
                 <div class="col-sm-5">
                     <p>Disponiblilidad 24 horas.</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span>  Cra. 1 # 18- a12, Bogotá</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Cra. 1 # 18- a12, Bogotá</p>
                     <p><span class="glyphicon glyphicon-phone"></span>+1 567 4567</p>
                     <p><span class="glyphicon glyphicon-envelope"></span> smartdesigndevelopers@gmail.com</p>
                 </div>
@@ -186,7 +173,7 @@
         <!-- Add Google Maps -->
         <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script>
-            var myCenter = new google.maps.LatLng(4.6034567,-74.0650267);
+            var myCenter = new google.maps.LatLng(4.6034567, -74.0650267);
 
             function initialize() {
                 var mapProp = {
@@ -213,7 +200,7 @@
             <a href="#myPage" title="To Top">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a>
-            
+
         </footer>
 
         <link rel="stylesheet" href="css/app.css">
