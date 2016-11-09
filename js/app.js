@@ -5,19 +5,12 @@ app.config(function($routeProvider) {
         .when("/", {
         templateUrl : "html/main.html",
     })
-        .when("/catalogoSha", {
-        templateUrl : "html/catalogoSha.html",
+        .when("/catalogo", {
+        templateUrl : "html/catalogo.html",
         controller : "catalogoCtrl"
-    }) .when("/catalogoAlfa", {
-        templateUrl : "html/catalogoAlfa.html",
-        controller : "catalogoCtrl"
-    }) .when("/catalogoMya", {
-        templateUrl : "html/catalogoMya.html",
-        controller : "catalogoCtrl"
-    })
-        .when("/producto", {
+    })  .when("/producto", {
         templateUrl : "html/producto.html",
-        controller : "catalogoCtrl"
+        controller : "productoCtrl"
     });
 });
 
