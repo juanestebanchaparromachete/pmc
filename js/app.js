@@ -77,3 +77,12 @@ function gotoQr() {
 function goToCatalogoMuebles() {
     window.location.href = 'html/catalogo.html';
 }
+
+function gotoej6(){
+    window.location.href='html/ejemplo6/ejemplo6.html';
+}
+
+
+function gotoej4(){
+    window.location.href='html/ejemplo4/ejemplo4.html';
+}
