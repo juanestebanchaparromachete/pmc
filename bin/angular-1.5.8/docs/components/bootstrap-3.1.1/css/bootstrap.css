@@ -755,8 +755,7 @@ pre code {
   }
 }
 .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+  
   margin-right: auto;
   margin-left: auto;
 }
@@ -4381,6 +4380,8 @@ a.list-group-item.active > .badge,
 }
 .container .jumbotron {
   border-radius: 6px;
+    padding-right: 5px !important;
+    padding-left: 5px  !important;
 }
 .jumbotron .container {
   max-width: 100%;

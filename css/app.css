@@ -18,6 +18,7 @@ h4 {
     color: #303030;
     font-weight: 400;
     margin-bottom: 30px;
+    
 }
 
 .jumbotron {
@@ -25,6 +26,7 @@ h4 {
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
+    width: auto !important;
 }
 
 .container-fluid {
@@ -37,11 +39,11 @@ h4 {
 
 .logo-small {
     color: black;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .logo {
-    color: #f4511e;
+    color: darkolivegreen;
     font-size: 200px;
 }
 
@@ -221,4 +223,46 @@ footer .glyphicon {
 
 .lcd {
     color: black;
+}
+
+.fondologo {
+    width: 100%;
+    background-color: white !important;
+}
+
+.light {
+ 
+  opacity: 0.7; 
+} 
+
+.light:hover { 
+  opacity: 1; 
+}
+
+
+.imageSize {
+    max-width: 100% ! important ;
+    object-fit: fill !important;
+    object-position: center !important;
+}
+
+.colorSt {
+    color:darkolivegreen !important;
+}
+
+.principalContainer {
+    padding-top: 15%;
+    padding-left: 3%;
+    padding-right: 3%;
+
+}
+
+.content {
+    
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.background {
+  border-color:darkolivegreen;
 }

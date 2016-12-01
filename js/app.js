@@ -3,6 +3,18 @@ var app = angular.module('myApp', ['ngRoute']);
 app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
+        templateUrl : "html/presentacion.html",
+    })
+        .when("/smart", {
+        templateUrl : "html/presentacion.html",
+    })
+        .when("/laidea", {
+        templateUrl : "html/laidea.html",
+    })
+        .when("/elfuturo", {
+        templateUrl : "html/ideas.html",
+    })
+        .when("/empresas", {
         templateUrl : "html/main.html",
     })
         .when("/catalogo", {
@@ -27,41 +39,6 @@ function goBack() {
 }
 
 
-$(document).ready(function () {
-    // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        } // End if
-    });
-
-    $(window).scroll(function () {
-        $(".slideanim").each(function () {
-            var pos = $(this).offset().top;
-
-            var winTop = $(window).scrollTop();
-            if (pos < winTop + 600) {
-                $(this).addClass("slide");
-            }
-        });
-    });
-})
-
 function gotoGeo() {
     window.location.href = 'html/geolocalizacion/geolocalizacion.html';
 }
@@ -83,6 +60,15 @@ function gotoej6(){
 }
 
 
-function gotoej4(){
-    window.location.href='html/ejemplo4/ejemplo4.html';
+function gotoEmpresas(){
+    window.location.href='#empresas';
 }
+function gotoLaidea(){
+    window.location.href='#laidea';
+}
+
+
+function gotoElfuturo(){
+    window.location.href='#elfuturo';
+}
+
