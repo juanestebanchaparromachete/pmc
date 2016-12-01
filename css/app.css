@@ -266,3 +266,8 @@ footer .glyphicon {
 .background {
   border-color:darkolivegreen;
 }
+
+.backjd {
+    background-color: white !important;
+    border-color: darkolivegreen !important ;
+}

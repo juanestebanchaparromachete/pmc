@@ -58,6 +58,9 @@ function goToCatalogoMuebles() {
 function gotoej6(){
     window.location.href='html/ejemplo6/ejemplo6.html';
 }
+function gotoej4(){
+    window.location.href='html/ejemplo4/ejemplo4.html';
+}
 
 
 function gotoEmpresas(){
